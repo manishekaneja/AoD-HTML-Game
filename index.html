@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Game</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/attackScreen.css">
+</head>
+
+<body>
+    <canvas style="display:none;"></canvas>
+    <div id="container">
+    </div>
+    <div id="layer1">
+        <div>
+            <div>
+                <p id="string1">Enter the name of First Player</p>
+                <p><input type="text" id="name" placeholder="Name of Player" value="Player 1"></p>
+            </div>
+            <div>
+                <div id=media>
+                    <video id=playervideo autoplay></video>
+                    <img id=playerphoto src="">
+                </div>
+                <button id="capture" class="custom_button">
+                    Click
+                </button>
+                <button id="retake" class="custom_button">
+                    Retake
+                </button>
+                <button id=setDefault class="custom_button">
+                    Select Default
+                </button>
+            </div>
+            <div id=next>
+
+                <button id="nextButton" class="custom_button">
+                    Next
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <div id="layer2">
+        <div>
+            <h1>Click Here <i class="em em-three_button_mouse"></i> </h1>
+            <p>
+                <i class="em em-man"></i> &awconint; It is a two player game &awconint; <i class="em em-woman"></i>
+            </p>
+            <p>
+                &awconint; This game is all about defending Yourself and Attacking your Opponent <i
+                    class="em em-gun"></i>
+            </p>
+            <p>
+                <i class="em em-man-walking"></i> Each player is allowed to make a step at a time &awconint;
+            </p>
+            <p>
+                <i class="em em-city_sunrise"></i>Players must be face to face to start a fight <i
+                    class="em em-city_sunset"></i>
+            </p>
+            <p>
+                &awconint; Each time a player attcked by opponent,<i class="em em-fire"></i> <br /> opponent's health
+                get decreased by some amount
+                <em> ( Same as it's attack power ) </em> &awconint;
+            </p>
+            <p>
+                &awconint; The first one to decrease the health of it's enemy to zero will win &awconint;
+            </p>
+            <p>
+                &awconint; Possible option's to move are highlighted in <span
+                    style="background-color:pink;padding: 5px 0px;"> pink</span>
+                &awconint;
+            </p>
+            <p>
+                &awconint; You also got few opportunities to raise your attack power through some special<span
+                    style="background-color:green;color: white;padding: 5px 0px;"> green</span> boxes &awconint;
+            </p>
+            <p>
+                &awconint; Also to some paths are blocked by <span
+                    style="background-color: black; color:white;padding: 5px 0px;">black </span>obstacle &awconint;
+            </p>
+            <p id="skip">
+                &awconint; Skip &awconint;
+            </p>
+
+            <button id="nextButton1" class="custom_button">
+                Let's go and find out remaining while playing
+            </button>
+        </div>
+    </div>
+    <div id="attackLayer" style="display: none;">
+        <div>
+            <div class="p1"><div class="ani"></div></div>
+            <div class="p2"><div class="ani"></div></div>
+            <div class="attackBall left"></div>
+        </div>
+        <div class="actions">
+            <button id="attack">
+                Attack
+            </button>
+            <button id="defence">
+                Defence
+            </button>
+        </div>
+
+
+
+    </div>
+    <div id="message_alert">
+    </div>
+    <div id="screenSizeError">
+        <p>Sorry, But this game is not made for low dimensions. <i class="em em-disappointed"></i></p>
+        <p>Please try on a different Device. <i class="em em-iphone"></i></p>
+
+    </div>
+    <script src="./assets/js/layer2.js"></script>
+    <script src="./assets/js/layer1.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/attack.js"></script>
+</body>
+
+</html>
